@@ -41,6 +41,13 @@ const getMinTimeInterval = (intervalOne, intervalTwo) => {
 }
 
 const smallestTimeInterval = arr => {
+  if (!arr.length) {
+    return "no times recieved"
+  }
+  if (arr.length === 1) {
+    return "recieved only one time, no intervals found"
+  }
+
   let minTimeInteval = { hours: 25, minutes: 61 } // impossibly large given the problem
 
   for (let i = 0; i < arr.length - 1; i++) {
